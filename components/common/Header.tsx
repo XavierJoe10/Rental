@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@/contexts/UserContext';
 
@@ -10,9 +11,19 @@ export default function Header() {
     <header className="bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-xl font-semibold text-gray-900">
-            RENTCHAIN
-          </Link>
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+        src="/logo.png"
+        alt="RentChain Logo"
+        width={40}
+        height={40}
+        priority
+         />
+        <span className="text-xl font-semibold text-gray-900">
+           RENTCHAIN
+       </span>
+        </Link>
+
           
           <nav className="flex items-center gap-4">
             {currentUser ? (

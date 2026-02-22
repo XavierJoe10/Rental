@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+export const runtime = 'nodejs';
 import db from '@/lib/db';
 import { CreatePropertyDto } from '@/types';
 import { z } from 'zod';
